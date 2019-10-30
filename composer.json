@@ -1,0 +1,54 @@
+{
+    "name": "marcusmyers/navigator",
+    "description": "A simple package to create a navigation for a website",
+    "keywords": [
+        "marcusmyers",
+        "navigator"
+    ],
+    "homepage": "https://github.com/marcusmyers/navigator",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mark Myers",
+            "email": "marcusmyers@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.3",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Marcusmyers\\Navigator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Marcusmyers\\Navigator\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Marcusmyers\\Navigator\\NavigatorServiceProvider"
+            ],
+            "aliases": {
+                "Navigator": "Marcusmyers\\Navigator\\NavigatorFacade"
+            }
+        }
+    }
+}
