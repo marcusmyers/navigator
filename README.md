@@ -1,8 +1,8 @@
-# Very short description of the package
+# Navigator
+
+A very simple package to build a website navigation bar.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/marcusmyers/navigator.svg?style=flat-square)](https://packagist.org/packages/marcusmyers/navigator)
-[![Build Status](https://img.shields.io/travis/marcusmyers/navigator/master.svg?style=flat-square)](https://travis-ci.org/marcusmyers/navigator)
-[![Quality Score](https://img.shields.io/scrutinizer/g/marcusmyers/navigator.svg?style=flat-square)](https://scrutinizer-ci.com/g/marcusmyers/navigator)
 [![Total Downloads](https://img.shields.io/packagist/dt/marcusmyers/navigator.svg?style=flat-square)](https://packagist.org/packages/marcusmyers/navigator)
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
@@ -13,12 +13,14 @@ You can install the package via composer:
 
 ```bash
 composer require marcusmyers/navigator
+php artisan vendor:publish --provider="Marcusmyers\Navigator\NavigatorServiceProvider
+php artisan migrate
 ```
 
 ## Usage
 
 ``` php
-// Usage description here
+<Navigator :nav-json="{{ ... }}"/>
 ```
 
 ### Testing
